@@ -4,8 +4,6 @@
 
 using namespace std;
 
-public class source1{
-  public static void main(String args[]){
-    cout << "Hello, World!" << endl;
-  }
+int main(){
+  cout << "Hello, World!" << endl;
 }
