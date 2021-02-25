@@ -2,4 +2,9 @@
 #ifndef SOURCE2_H // include guard
 #define SOURCE2_H
 
-#endif /* SOURCE1_H */
+helloWorld(){
+  return "Hello, World!";
+}
+
+
+#endif /* SOURCE2_H */
