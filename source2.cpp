@@ -2,10 +2,10 @@
 #include "source2.h" // header in local directory
 #include <iostream> // header in standard library
 
-using namespace N;
 using namespace std;
 
-void source2::helloWorld()
-{
+public class source2{
+  public static void main(String args[]){
     cout << "Hello, World!" << endl;
+  }
 }
