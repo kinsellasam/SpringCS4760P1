@@ -1,16 +1,11 @@
-CXX = gcc
-CXXFLAGS = -g
-EXEC = master
-OBJS = source1.o source2.o #two source files
+all: src1 src2
 
-${EXEC}: ${OBJS}
-	${CXX} ${CXXFLAGS} -o ${EXEC} ${OBJS}
+src1: source1.cpp
+	g++ -o src1 source1.cpp
 
-source1.o: source1.cpp
-	${CXX} ${CXXFLAGS} -c source1.cpp
-
-source2.o: source2.cpp
-	${CXX} ${CXXFLAGS} -c source2.cpp
+src2: source2.cpp
+	g++ -o src2 source2.cpp
 
 clean:
-	rm -f ${EXEC} ${OBJS}
+	rm src1
+	rm src2
