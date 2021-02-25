@@ -1,4 +1,4 @@
-all: src1 src2
+all: master helper
 
 master: source1.cpp
 	g++ -o src1 source1.cpp
