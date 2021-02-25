@@ -2,8 +2,9 @@
 #ifndef SOURCE1_H // include guard
 #define SOURCE1_H
 
- string helloWorld(){
-  return "Hello, World!";
-  }
+ int helloWorld(){
+  cout << "Hello, World!" << endl;
+  return;
+ }
 
 #endif /* SOURCE1_H */
