@@ -2,7 +2,7 @@
 #ifndef SOURCE2_H // include guard
 #define SOURCE2_H
 
-String helloWorld(){
+string helloWorld(){
   return "Hello, World!";
 }
 
