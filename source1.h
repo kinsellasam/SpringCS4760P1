@@ -2,7 +2,7 @@
 #ifndef SOURCE1_H // include guard
 #define SOURCE1_H
 
-string helloWorld(){
+public string helloWorld(){
   return "Hello, World!"
 }
 
