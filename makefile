@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g
+CXXFLAGS = -gcc
 EXEC = master
 OBJS = source1.o source2.o #two source files
 
