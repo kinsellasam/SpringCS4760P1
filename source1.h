@@ -3,7 +3,7 @@
 #define SOURCE1_H
 
  string helloWorld(){
-  return "Hello, World!"
+  return "Hello, World!";
   }
 
 #endif /* SOURCE1_H */
