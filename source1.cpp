@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
     }
 
     if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
-      cout << argv[i] " ";
+      cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
       cout << "\n\nThis is where the forking action happens!" << endl;
     }
