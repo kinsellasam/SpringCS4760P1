@@ -193,8 +193,8 @@ int main(int argc, char *argv[]){
 
     case 5:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << argv[argumentCount] << "\n";
-        cout << "\n\nSomeone calling for help?" << endl;
+        cout << argv[argumentCount];
+        cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
