@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char *argv[]){
   cout << "Hi, I'm just running a quick check.";
-  cout << " You typed in " << argc << " argument(s):\n";
+  cout << " You typed in " << argc << " argument(s):\n\n";
 
   for(int i = 0; i <= argc; i++){    //checking the user input for errors
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
     if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
       cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
-      cout << "\n\nThis is where the forking action happens!" << endl;
+      cout << "\nThis is where the forking action happens!" << endl;
     }
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
       //indicate the number of children alowed to exist
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]){
       const int defaultChildren = 20;
       cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
-      cout << "\n\nBy default, only 20 children "
+      cout << "\nBy default, only 20 children "
            << "are allowed to exist at a time." << endl;
     }
     else if(string(argv[i]) == "-t"){
@@ -53,6 +53,7 @@ int main(int argc, char *argv[]){
         return 0;
       }
     }
+
   }
 
 
