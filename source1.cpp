@@ -53,6 +53,9 @@ int main(int argc, char *argv[]){
         return 0;
       }
     }
+    else{
+      cout << "Nothing else was found in the command line. Exiting... \n\n\n"
+    }
 
   }
 
