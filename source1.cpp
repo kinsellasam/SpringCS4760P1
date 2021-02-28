@@ -6,17 +6,25 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
+
+  int argumentCount = 0;
+
   cout << "Hi, I'm just running a quick check.";
   cout << " You typed in " << argc << " argument(s):\n\n";
 
+  do{
   for(int i = 0; i <= argc; i++){    //checking the user input for errors
 
     if(argc == 1){
       cout << argv[i] << "\n";
       cout << "I see that you have not put any input in..... Exiting.\n\n";
+      argumentCount++;
       return 0;
     }
-    else if(string(argv[i]) == "-h"){    //basic help function
+    else{
+      argumentCount++;
+    }
+    if(string(argv[i]) == "-h"){    //basic help function
       cout << argv[i] << "\n";
       cout << "\n\nSomeone calling for help?" << endl;
       cout << "This program is goint to compute the sum of integers using";
@@ -24,12 +32,15 @@ int main(int argc, char *argv[]){
       cout << "This program will make use of multiple processes using";
       cout << " shared memory and signals to communicate between processes\n";
       cout << "Exiting...\n\n\n";
+      argumentCount = argumentCount + 1;
       return 0;
     }
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
       cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
       cout << "This is where the forking action happens!" << endl;
+      argumentCount = argumentCount + 2;
+
     }
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
       //indicate the number of children alowed to exist
@@ -39,24 +50,24 @@ int main(int argc, char *argv[]){
       cout << argv[i+1] << "\n";
       cout << "By default, only 20 children "
            << "are allowed to exist at a time.\n" << endl;
+      argumentCount = argumentCount + 2;
     }
     else if(string(argv[i]) == "-t"){
       if(string(argv[i+1]) == "time"){
         cout << argv[i] << " ";
         cout << argv[i+1] << "\n";
         cout << "By default, the program will terminate after 100 seconds.\n";
+        argumentCount = argumentCount + 2;
       }
       else{
         cout << "\nThe command you're looking for is '-t time'" << endl;
+        argumentCount++;
         return 0;
       }
     }
-    else if(string(argv[i] == NULL)){
-      cout << "FOUND: NULL in the command line. Exiting.\n\n\n"
-      return 0;
-    }
 
   }
+  }while(argumen != argc);
 
 
 
