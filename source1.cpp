@@ -67,7 +67,7 @@ int main(int argc, char *argv[]){
     }
 
   }
-  }while(argumen != argc);
+}while(argumentCount != argc);
 
 
 
