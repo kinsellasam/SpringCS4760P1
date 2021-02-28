@@ -111,8 +111,25 @@ int main(int argc, char *argv[]){
         cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n" << endl;
         argumentCount = argumentCount + 2;
+        break;
       }
       else if(string(argv[argumentCount]) == "-t"){
+        if(string(argv[argumentCount+1]) == "time"){
+          cout << argv[argumentCount] << " ";
+          cout << argv[argumentCount+1] << "\n";
+          cout << "By default, the program will terminate after 100 seconds.\n";
+          argumentCount = argumentCount + 2;
+          break;
+        }
+        else{
+          cout << "\nThe command you're looking for is '-t time'" << endl;
+          argumentCount++;
+          return 0;
+        }
+      }
+
+    case 3:
+      if(string(argv[argumentCount]) == "-t"){
         if(string(argv[argumentCount+1]) == "time"){
           cout << argv[argumentCount] << " ";
           cout << argv[argumentCount+1] << "\n";
