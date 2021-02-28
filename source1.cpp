@@ -30,15 +30,15 @@ int main(int argc, char *argv[]){
     if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
       cout << argv[i+1] << "\n";
       cout << "\n\nThis is where the forking action happens!" << endl;
-      break;
+      return 0;
     }
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
       //indicate the number of children alowed to exist
       //default: 20
       const int defaultChildren = 20;
+      cout << argv[i+1] << "\n";
       cout << "\n\nBy default, only 20 children "
            << "are allowed to exist at a time." << endl;
-
     }
     else if(string(argv[i]) == "-t" || string(argv[i]) == "t"){
       if(string(argv[i+1]) == "time" || string(argv[i+1]) == "time"){
