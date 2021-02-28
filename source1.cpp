@@ -30,16 +30,18 @@ int main(int argc, char *argv[]){
 
     }
 
-    else if(string(argv[1]) == "-s" && string(argv[2]) == "i"){
+    if(string(argv[1]) == "-s" && string(argv[2]) == "i"){
+      const int defaultChildren = 20;
+      cout << "This is where the forking action happens!" << endl;
+    }
+    else if(string(argv[1]) == "-s" && string(argv[2]) == "x"){
       //indicate the number of children alowed to exist
       //default: 20
       const int defaultChildren = 20;
-
-      cout << "This is where the forking action happens!" << endl;
-
+      cout << "By default, only 20 children "
+           << "are allowed to exist at a time." << endl;
 
     }
-
 
   return 0;
 }
