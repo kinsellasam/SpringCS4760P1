@@ -4,12 +4,22 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-
-  char commandLineArg1 = argv[1];
-  if(commandLineArg1 == 'h'){
-    cout << "help message goes here" << endl;
-    return -1;
+  int counter;
+  printf("\nThe program name is: %s",argv[0]);
+  if(argc == 1){
+    printf("You did not put anything else in the command line.");
+    cout << "Allocating memory...\n\n";
   }
-  cout << "Hello, World!" << endl;
+  if(argc >2){
+    if(argv[1] == "-h"){
+      cout <<"The help command has been called.\n");
+      cout <<"This program is designed to compute the sum of n integers" &
+             " using a binary tree of processes." << endl;
+      cout <<"Multiple processes will be " &
+             "implemented using shared memory."<< endl;
+    }
+  }
+
+
   return 0;
 }
