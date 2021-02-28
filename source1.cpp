@@ -16,8 +16,7 @@ int main(int argc, char *argv[]){
       cout << "I see that you have not put any input in..... Exiting.\n\n";
       return 0;
     }
-
-    if(string(argv[i]) == "-h"){    //basic help function
+    else if(string(argv[i]) == "-h"){    //basic help function
       cout << argv[i] << "\n";
       cout << "\n\nSomeone calling for help?" << endl;
       cout << "This program is goint to compute the sum of integers using";
@@ -42,7 +41,7 @@ int main(int argc, char *argv[]){
            << "are allowed to exist at a time.\n" << endl;
     }
     else if(string(argv[i]) == "-t"){
-      if(string(argv[i+1]) == "time" || string(argv[i+1]) == "time"){
+      if(string(argv[i+1]) == "time"){
         cout << argv[i] << " ";
         cout << argv[i+1] << "\n";
         cout << "By default, the program will terminate after 100 seconds.\n";
@@ -51,6 +50,10 @@ int main(int argc, char *argv[]){
         cout << "\nThe command you're looking for is '-t time'" << endl;
         return 0;
       }
+    }
+    else{
+      cout << "I can't find anything usefull in the command line. try the '-h' flag.\n\n";
+      return 0;
     }
 
   }
