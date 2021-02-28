@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
       cout << "The help function was called." << endl;
       exit(EXIT_SUCCESS);*/
 
-      switch(argv[1]){
+      switch(argv[1] =="-h"sv || argv[0] == "--help"sv){
 
         case "-h":
           cout << "Someone calling for help?" << endl;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
 
         default:
           cout << "This expression: " << argv[1]
-               << "Yeah..... I don't like this one." << endl;
+               << "Yeah..... I got nothing." << endl;
       }
 
     }
