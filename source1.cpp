@@ -30,7 +30,6 @@ int main(int argc, char *argv[]){
     if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
       cout << argv[i+1] << "\n";
       cout << "\n\nThis is where the forking action happens!" << endl;
-      return 0;
     }
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
       //indicate the number of children alowed to exist
@@ -39,16 +38,18 @@ int main(int argc, char *argv[]){
       cout << argv[i+1] << "\n";
       cout << "\n\nBy default, only 20 children "
            << "are allowed to exist at a time." << endl;
+
+           else if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
+             if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
+               cout << "By default, the program will terminate after 100 seconds.\n";
+             }
+             else{
+               cout << "The command you're looking for is '-t time'" << endl;
+               return 0;
+             }
+           }
     }
-    else if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
-      if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
-        cout << "By default, the program will terminate after 100 seconds.\n";
-      }
-      else{
-        cout << "The command you're looking for is '-t time'" << endl;
-        return 0;
-      }
-    }
+
     else{
       cout << "No more commands were given. Exiting." << endl;
     }
