@@ -13,7 +13,7 @@ int main(int argc, char *argv[]){
     cout << argv[i] << "\n";
 
     if(argc < 2){
-      cout << "I see that you have not put any input in..... Hi.";
+      cout << "I see that you have not put any input in..... Hi.\n\n";
       return 0;
     }
 
