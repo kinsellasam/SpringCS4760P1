@@ -24,6 +24,7 @@ int main(int argc, char *argv[]){
         default:
           cout << "This expression: " << argv[1]
                << "Yeah..... I got nothing." << endl;
+          break;
       }
 
     }
