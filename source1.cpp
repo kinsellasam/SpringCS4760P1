@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
         //default: 20
         const int defaultChildren = 20;
 
-        char *childCount[] = [];
+        char *childCount[] = {};
         childCount[0] = argv[2];
         cout << "Child count is: " << childCount[0] << endl;
 
