@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
         //default: 20
         const int defaultChildren = 20;
 
-        char userInput = argv[2];
+        char userInput[] = argv[2];
         int childCount = 0;
       }
 
