@@ -31,8 +31,11 @@ int main(int argc, char *argv[]){
         //default: 20
         const int defaultChildren = 20;
 
-        char userInput[] = argv[2];
-        int childCount = 0;
+        char childCount[] = [];
+        childcount[0] = argv[2];
+        cout << "Child count is: " << childCount[0] << endl;
+
+
       }
 
     }
