@@ -99,6 +99,7 @@ int main(int argc, char *argv[]){
         cout << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
         argumentCount = argumentCount + 2;
+        break;
 
       }
       else if(string(argv[argumentCount]) == "-s" &&
