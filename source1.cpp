@@ -96,7 +96,7 @@ int main(int argc, char *argv[]){
       else if(string(argv[argumentCount]) == "-s" &&
               string(argv[argumentCount+1]) == "i"){
                 cout << "Argument: " << argv[argumentCount];
-                cout << "Argument: " << argv[argumentCount+1] << "\n";
+                cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
         argumentCount = argumentCount + 2;
         break;
@@ -108,7 +108,7 @@ int main(int argc, char *argv[]){
         //default: 20
         const int defaultChildren = 20;
         cout << "Argument: " << argv[argumentCount];
-        cout << "Argument: " << argv[argumentCount+1] << "\n";
+        cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n" << endl;
         argumentCount = argumentCount + 2;
@@ -124,7 +124,7 @@ int main(int argc, char *argv[]){
         else{
             if(string(argv[argumentCount+1]) == "time"){
               cout << "Argument: " << argv[argumentCount];
-              cout << "Argument: " << argv[argumentCount+1] << "\n";
+              cout << "\nArgument: " << argv[argumentCount+1] << "\n";
               cout << "By default, the program will terminate after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               break;
@@ -163,7 +163,7 @@ int main(int argc, char *argv[]){
         //default: 20
         const int defaultChildren = 20;
         cout << "Argument: " << argv[argumentCount];
-        cout << "Argument: " << argv[argumentCount+1] << "\n";
+        cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n\n" << endl;
         argumentCount = argumentCount + 2;
@@ -178,7 +178,7 @@ int main(int argc, char *argv[]){
         else{
             if(string(argv[argumentCount+1]) == "time"){
               cout << "Argument: " << argv[argumentCount];
-              cout << "Argument: " << argv[argumentCount+1] << "\n";
+              cout << "\nArgument: " << argv[argumentCount+1] << "\n";
               cout << "By default, the program will terminate after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               return 0;
