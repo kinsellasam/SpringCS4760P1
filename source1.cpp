@@ -39,19 +39,20 @@ int main(int argc, char *argv[]){
       cout << "\n\nBy default, only 20 children "
            << "are allowed to exist at a time." << endl;
 
-           else if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
-             if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
-               cout << "By default, the program will terminate after 100 seconds.\n";
-             }
-             else{
-               cout << "The command you're looking for is '-t time'" << endl;
-               return 0;
-             }
-           }
+      if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
+        if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
+          cout << "By default, the program will terminate after 100 seconds.\n";
+        }
+        else{
+          cout << "The command you're looking for is '-t time'" << endl;
+          return 0;
+        }
+      }
     }
 
     else{
-      cout << "No more commands were given. Exiting." << endl;
+      cout << "Something went wrong in the commmand line." << endl;
+      return 0;
     }
   }
 
