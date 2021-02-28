@@ -52,8 +52,8 @@ int main(int argc, char *argv[]){
       }
     }
     else{
-      cout << "I can't find anything usefull in the command line. try the '-h' flag.\n\n";
-      return 0;
+      cout << argv[i] << "\n";
+
     }
 
   }
