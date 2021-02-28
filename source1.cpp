@@ -127,7 +127,7 @@ int main(int argc, char *argv[]){
               cout << argv[argumentCount+1] << "\n";
               cout << "By default, the program will terminate after 100 seconds.\n";
               argumentCount = argumentCount + 2;
-              return 0;
+              break;
             }
             else{
               cout << "\nThe command you're looking for is '-t time'" << endl;
