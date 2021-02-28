@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
       return 0;
     }
 
-    if(string(argv[1]) == "-h"){    //basic help function
+    if(string(argv[i]) == "-h"){    //basic help function
       cout << argv[i] << "\n";
       cout << "\n\nSomeone calling for help?" << endl;
       cout << "This program is goint to compute the sum of integers using";
@@ -27,8 +27,7 @@ int main(int argc, char *argv[]){
       cout << "Exiting...\n\n\n";
       return 0;
     }
-
-    if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
+    else if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
       cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
       cout << "\nThis is where the forking action happens!" << endl;
