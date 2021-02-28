@@ -30,14 +30,12 @@ int main(int argc, char *argv[]){
 
     }
 
-    if(string(argv[1]) == "-s" && argv[2] >= 0){
+    if(string(argv[1]) == "-s" && argv[2] == 'i'){
       //indicate the number of children alowed to exist
       //default: 20
       const int defaultChildren = 20;
 
-      char *childCount[] = {};
-      childCount[0] = argv[2];
-      cout << "Child count is: " << childCount[0] << endl;
+      cout << "This is where the forking action happens!" << endl;
 
 
     }
