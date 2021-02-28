@@ -139,7 +139,7 @@ int main(int argc, char *argv[]){
 
     case 3:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << argv[argumentCount] << "\n";
+        cout << "Argurment: " << argv[argumentCount];
         cout << "\n\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
@@ -151,8 +151,8 @@ int main(int argc, char *argv[]){
       }
       else if(string(argv[argumentCount]) == "-s" &&
               string(argv[argumentCount+1]) == "i"){
-                cout << argv[argumentCount] << " ";
-                cout << argv[argumentCount+1] << "\n";
+                cout << "Argurment: " << argv[argumentCount];
+                cout << "Argument: " << argv[argumentCount+1] << "\n";
                 cout << "This is where the forking action happens!\n\n" << endl;
                 argumentCount = argumentCount + 2;
                 break;
@@ -162,8 +162,8 @@ int main(int argc, char *argv[]){
         //indicate the number of children alowed to exist
         //default: 20
         const int defaultChildren = 20;
-        cout << argv[argumentCount] << " ";
-        cout << argv[argumentCount+1] << "\n";
+        cout << "Argurment: " << argv[argumentCount];
+        cout << "Argument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n\n" << endl;
         argumentCount = argumentCount + 2;
@@ -177,8 +177,8 @@ int main(int argc, char *argv[]){
         }
         else{
             if(string(argv[argumentCount+1]) == "time"){
-              cout << argv[argumentCount] << " ";
-              cout << argv[argumentCount+1] << "\n";
+              cout << "Argurment: " << argv[argumentCount];
+              cout << "Argument: " << argv[argumentCount+1] << "\n";
               cout << "By default, the program will terminate after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               return 0;
@@ -193,7 +193,7 @@ int main(int argc, char *argv[]){
 
     case 5:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << argv[argumentCount];
+        cout << "Argurment: " << argv[argumentCount];
         cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
@@ -205,7 +205,7 @@ int main(int argc, char *argv[]){
       }
 
     default:
-      cout << argv[argumentCount];
+      cout << "Argurment: " << argv[argumentCount];
       cout << "\nERROR:Comand line: " << argv[argumentCount];
       cout << "\nSomething was not correct. Check 'master -h'";
       cout << "\n\t for the proper syntax. Exiting...\n\n\n";
