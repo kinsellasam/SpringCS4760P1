@@ -27,28 +27,29 @@ int main(int argc, char *argv[]){
       return 0;
     }
 
+    if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
+      cout << "\n\nThis is where the forking action happens!" << endl;
+    }
+    else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
+      //indicate the number of children alowed to exist
+      //default: 20
+      const int defaultChildren = 20;
+      cout << "\n\nBy default, only 20 children "
+           << "are allowed to exist at a time." << endl;
+
+    }
+    else if(string(argv[i]) == "-t" || string(argv[i]) == "t"){
+      if(string(argv[i+1]) == "time" || string(argv[i+1]) == "time"){
+        cout << "By default, the program will terminate after 100 seconds.\n";
+      }
+      else{
+        cout << "The command you're looking for is '-t time'" << endl;
+        return 0;
+      }
+    }
   }
 
-  if(string(argv[1]) == "-s" && string(argv[2]) == "i"){
-    cout << "\n\nThis is where the forking action happens!" << endl;
-  }
-  else if(string(argv[1]) == "-s" && string(argv[2]) == "x"){
-    //indicate the number of children alowed to exist
-    //default: 20
-    const int defaultChildren = 20;
-    cout << "\n\nBy default, only 20 children "
-         << "are allowed to exist at a time." << endl;
 
-  }
-  else if(string(argv[2]) == "-t" || string(argv[3]) == "t"){
-    if(string(argv[3]) == "time" || string(argv[4]) == "time"){
-      cout << "By default, the program will terminate after 100 seconds.\n";
-    }
-    else{
-      cout << "The command you're looking for is '-t time'" << endl;
-      return 0;
-    }
-  }
 
   return 0;
 }
