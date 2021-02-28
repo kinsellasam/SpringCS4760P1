@@ -191,7 +191,7 @@ int main(int argc, char *argv[]){
           }
         }
 
-    case 6:
+    case 5:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
         cout << argv[argumentCount] << "\n";
         cout << "\n\nSomeone calling for help?" << endl;
