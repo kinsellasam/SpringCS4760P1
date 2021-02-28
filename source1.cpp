@@ -11,9 +11,21 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < argc; i++)
       cout << argv[i] << "\n";
 
-    if(argv[1] == "-h"){
+    /*if(argv[1] == "-h"){
       cout << "The help function was called." << endl;
-      exit(EXIT_SUCCESS);
+      exit(EXIT_SUCCESS);*/
+
+      switch(argv[1]){
+
+        case "-h":
+          cout << "Someone calling for help?" << endl;
+          break;
+
+        default:
+          cout << "This expression: " << argv[1]
+               << "Yeah..... I don't like this one." << endl;
+      }
+
     }
   return 0;
 }
