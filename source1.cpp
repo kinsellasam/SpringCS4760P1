@@ -42,6 +42,15 @@ int main(int argc, char *argv[]){
            << "are allowed to exist at a time." << endl;
 
     }
+    else if((string(argv[2]) == "-t" || string(argv[3]) == "t"){
+      if(string(argv[3] == "time" || argv[4] == "time")){
+        cout << "By default, the program will terminate after 100 seconds.\n";
+      }
+      else{
+        cout << "The command you're looking for is '-t time'" << endl;
+        return 0;
+      }
+    }
 
   return 0;
 }
