@@ -106,8 +106,8 @@ int main(int argc, char *argv[]){
         //indicate the number of children alowed to exist
         //default: 20
         const int defaultChildren = 20;
-        cout << argv[i] << " ";
-        cout << argv[i+1] << "\n";
+        cout << argv[argumentCount] << " ";
+        cout << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n" << endl;
         argumentCount = argumentCount + 2;
