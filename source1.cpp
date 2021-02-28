@@ -39,7 +39,6 @@ int main(int argc, char *argv[]){
       cout << argv[i+1] << "\n";
       cout << "\n\nBy default, only 20 children "
            << "are allowed to exist at a time." << endl;
-      break;
     }
     else if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
       if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
