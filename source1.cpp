@@ -7,12 +7,12 @@ using namespace std;
 
 int main(int argc, char *argv[]){
   cout << "Hi, just running a quick check.";
-  cout << " you typed in " << argc << " arguments:\n";
+  cout << " you typed in " << argc << " argument(2):\n";
 
   for(int i = 0; i < argc; i++){    //checking the user input for errors
     cout << argv[i] << "\n";
 
-    if(argc < 2){
+    if(argc == 1){
       cout << "I see that you have not put any input in..... Hi.\n\n";
       return 0;
     }
