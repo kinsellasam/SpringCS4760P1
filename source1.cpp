@@ -130,7 +130,7 @@ int main(int argc, char *argv[]){
 
     case 3:
       if(string(argv[argumentCount]) == "-t"){
-        if(string(argv[argumentCount+1]) == "time"){
+        if(string(argv[argumentCount+1]) == "time" || argv[argumentCount+1] == NULL){
           cout << argv[argumentCount] << " ";
           cout << argv[argumentCount+1] << "\n";
           cout << "By default, the program will terminate after 100 seconds.\n";
