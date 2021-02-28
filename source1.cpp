@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
       return 0;
     }
 
-    if(string(argv[i]) == "-h"){    //basic help function
+    if(string(argv[1]) == "-h"){    //basic help function
       cout << "\n\nSomeone calling for help?" << endl;
       cout << "This program is goint to compute the sum of integers using";
       cout << " a BINARY TREE OF PROCESSES.\n";
