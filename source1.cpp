@@ -16,7 +16,7 @@ int main(int argc, char *argv[]){
       cout << "The help function was called." << endl;
       exit(EXIT_SUCCESS);*/
 
-      if(argv[0] =="-h" || argv[0] == "--help"){    //basic help function
+      if(string(argv[0]) =="-h" || string(argv[0]) == "--help"){    //basic help function
         cout << "Someone calling for help?" << endl;
         cout << "Exiting...\n\n\n";
         return 0;
