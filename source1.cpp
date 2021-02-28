@@ -1,5 +1,6 @@
 // source1.cpp
 #include <stdlib.h>
+#include <string>
 #include <iostream> // header in standard library
 
 using namespace std;
@@ -17,7 +18,6 @@ int main(int argc, char *argv[]){
 
       if(argv[0] =="-h" || argv[0] == "--help"){    //basic help function
         cout << "Someone calling for help?" << endl;
-
         cout << "Exiting...\n\n\n";
         return 0;
       }
