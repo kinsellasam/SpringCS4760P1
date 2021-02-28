@@ -49,11 +49,6 @@ int main(int argc, char *argv[]){
         }
       }
     }
-
-    else{
-      cout << "Something went wrong in the commmand line." << endl;
-      return 0;
-    }
   }
 
 
