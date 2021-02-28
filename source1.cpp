@@ -51,10 +51,6 @@ int main(int argc, char *argv[]){
         return 0;
       }
     }
-    else{
-      cout << argv[i] << "\n";
-
-    }
 
   }
 
