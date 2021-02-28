@@ -26,17 +26,19 @@ int main(int argc, char *argv[]){
         return 0;
       }
 
-      if(string(argv[1]) == "-s" && argv[2] >= 0){
-        //indicate the number of children alowed to exist
-        //default: 20
-        const int defaultChildren = 20;
-
-        char *childCount[] = {};
-        childCount[0] = argv[2];
-        cout << "Child count is: " << childCount[0] << endl;
 
 
-      }
+    }
+
+    if(string(argv[1]) == "-s" && argv[2] >= 0){
+      //indicate the number of children alowed to exist
+      //default: 20
+      const int defaultChildren = 20;
+
+      char *childCount[] = {};
+      childCount[0] = argv[2];
+      cout << "Child count is: " << childCount[0] << endl;
+
 
     }
   return 0;
