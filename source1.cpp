@@ -205,7 +205,9 @@ int main(int argc, char *argv[]){
       }
 
     default:
-      cout << "ERROR:Comand line: Something was not correct. Check 'master -h'";
+      cout << argv[argumentCount];
+      cout << "ERROR:Comand line: " << argv[argumentCount];
+      cout << "\nSomething was not correct. Check 'master -h'";
       cout << "\n\t for the proper syntax. Exiting...\n\n\n";
       return 0;
   }
