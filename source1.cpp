@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
   switch(argumentCount){
     case 0:
       if(argc == 1){
-        cout << argv[argumentCount] << "\n";
+        cout << "Argument: " << argv[argumentCount] << "\n";
         cout << "I see that you have not put any input in..... Exiting.\n\n";
         argumentCount++;
         return 0;
