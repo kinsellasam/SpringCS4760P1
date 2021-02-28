@@ -43,7 +43,7 @@ int main(int argc, char *argv[]){
 
     }
     else if(string(argv[2]) == "-t" || string(argv[3]) == "t"){
-      if(string(argv[3] == "time" || argv[4] == "time")){
+      if(string(argv[3]) == "time" || string(argv[4]) == "time")){
         cout << "By default, the program will terminate after 100 seconds.\n";
       }
       else{
