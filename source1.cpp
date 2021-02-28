@@ -190,6 +190,20 @@ int main(int argc, char *argv[]){
             }
           }
         }
+
+    case 6:
+      if(string(argv[argumentCount]) == "-h"){    //basic help function
+        cout << argv[argumentCount] << "\n";
+        cout << "\n\nSomeone calling for help?" << endl;
+        cout << "This program is goint to compute the sum of integers using";
+        cout << " a BINARY TREE OF PROCESSES.\n";
+        cout << "This program will make use of multiple processes using";
+        cout << " shared memory and signals to communicate between processes\n";
+        cout << "Exiting...\n\n\n";
+        argumentCount = argumentCount + 1;
+        return 0;
+      }
+
     default:
       cout << "ERROR:Comand line: Something was not correct. Check 'master -h'";
       cout << "\n\t for the proper syntax. Exiting...\n\n\n";
