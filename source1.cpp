@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
   switch(argumentCount){
     case 0:
       if(argc == 1){
-        cout << argv[i] << "\n";
+        cout << argv[argumentCount] << "\n";
         cout << "I see that you have not put any input in..... Exiting.\n\n";
         argumentCount++;
         return 0;
@@ -93,7 +93,8 @@ int main(int argc, char *argv[]){
         argumentCount = argumentCount + 1;
         return 0;
       }
-      else if(string(argv[argumentCount]) == "-s" && string(argv[i+1]) == "i"){
+      else if(string(argv[argumentCount]) == "-s" &&
+              string(argv[argumentCount+1]) == "i"){
         cout << argv[argumentCount] << " ";
         cout << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
