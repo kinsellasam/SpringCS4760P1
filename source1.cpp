@@ -138,8 +138,38 @@ int main(int argc, char *argv[]){
         }
 
     case 3:
-      if(string(argv[argumentCount]) == "-t"){
-
+      if(string(argv[argumentCount]) == "-h"){    //basic help function
+        cout << argv[argumentCount] << "\n";
+        cout << "\n\nSomeone calling for help?" << endl;
+        cout << "This program is goint to compute the sum of integers using";
+        cout << " a BINARY TREE OF PROCESSES.\n";
+        cout << "This program will make use of multiple processes using";
+        cout << " shared memory and signals to communicate between processes\n";
+        cout << "Exiting...\n\n\n";
+        argumentCount = argumentCount + 1;
+        return 0;
+      }
+      else if(string(argv[argumentCount]) == "-s" &&
+              string(argv[argumentCount+1]) == "i"){
+                cout << argv[argumentCount] << " ";
+                cout << argv[argumentCount+1] << "\n";
+                cout << "This is where the forking action happens!" << endl;
+                argumentCount = argumentCount + 2;
+                break;
+      }
+      else if(string(argv[argumentCount]) == "-s" &&
+              string(argv[argumentCount+1]) == "x"){
+        //indicate the number of children alowed to exist
+        //default: 20
+        const int defaultChildren = 20;
+        cout << argv[argumentCount] << " ";
+        cout << argv[argumentCount+1] << "\n";
+        cout << "By default, only 20 children "
+             << "are allowed to exist at a time.\n" << endl;
+        argumentCount = argumentCount + 2;
+        break;
+      }
+      else if(string(argv[argumentCount]) == "-t"){
         if(argc == 2){
           cout << "\nThe command you're looking for is '-t time'" << endl;
           argumentCount++;
