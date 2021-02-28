@@ -143,6 +143,10 @@ int main(int argc, char *argv[]){
         }
       }
 
+    default:
+      cout << "ERROR:Comand line: Something was not correct. Check 'master -h'";
+      cout << "\n\t for the proper syntax. Exiting...\n\n\n";
+      return 0;
   }
 }while(argumentCount != argc);
 
