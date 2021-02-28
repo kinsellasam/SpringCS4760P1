@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 
     }
 
-    if(string(argv[1]) == "-s" && argv[2] == 'i'){
+    if(string(argv[1]) == "-s" && string(argv[2]) == "i"){
       //indicate the number of children alowed to exist
       //default: 20
       const int defaultChildren = 20;
