@@ -41,8 +41,8 @@ int main(int argc, char *argv[]){
            << "are allowed to exist at a time." << endl;
       break;
     }
-    else if(string(argv[i]) == "-t" || string(argv[i]) == "t"){
-      if(string(argv[i+1]) == "time" || string(argv[i+1]) == "time"){
+    else if(string(argv[i+2]) == "-t" || string(argv[i+2]) == "t"){
+      if(string(argv[i+3]) == "time" || string(argv[i+3]) == "time"){
         cout << "By default, the program will terminate after 100 seconds.\n";
       }
       else{
