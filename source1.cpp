@@ -136,20 +136,21 @@ int main(int argc, char *argv[]){
           argumentCount++;
           return 0;
         }
-        else if(string(argv[argumentCount+1]) == "time"){
-          cout << argv[argumentCount] << " ";
-          cout << argv[argumentCount+1] << "\n";
-          cout << "By default, the program will terminate after 100 seconds.\n";
-          argumentCount = argumentCount + 2;
-          return 0;
-        }
         else{
-          cout << "\nThe command you're looking for is '-t time'" << endl;
-          argumentCount++;
-          return 0;
+            if(string(argv[argumentCount+1]) == "time"){
+              cout << argv[argumentCount] << " ";
+              cout << argv[argumentCount+1] << "\n";
+              cout << "By default, the program will terminate after 100 seconds.\n";
+              argumentCount = argumentCount + 2;
+              return 0;
+            }
+            else{
+              cout << "\nThe command you're looking for is '-t time'" << endl;
+              argumentCount++;
+              return 0;
+            }
+          }
         }
-      }
-
     default:
       cout << "ERROR:Comand line: Something was not correct. Check 'master -h'";
       cout << "\n\t for the proper syntax. Exiting...\n\n\n";
