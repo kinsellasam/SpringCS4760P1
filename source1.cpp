@@ -125,7 +125,7 @@ int main(int argc, char *argv[]){
             if(string(argv[argumentCount+1]) == "time"){
               cout << argv[argumentCount] << " ";
               cout << argv[argumentCount+1] << "\n";
-              cout << "By default, the program will terminate after 100 seconds.\n";
+              cout << "By default, the program will terminate after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               break;
             }
@@ -153,7 +153,7 @@ int main(int argc, char *argv[]){
               string(argv[argumentCount+1]) == "i"){
                 cout << argv[argumentCount] << " ";
                 cout << argv[argumentCount+1] << "\n";
-                cout << "This is where the forking action happens!" << endl;
+                cout << "This is where the forking action happens!\n\n" << endl;
                 argumentCount = argumentCount + 2;
                 break;
       }
@@ -165,7 +165,7 @@ int main(int argc, char *argv[]){
         cout << argv[argumentCount] << " ";
         cout << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
-             << "are allowed to exist at a time.\n" << endl;
+             << "are allowed to exist at a time.\n\n" << endl;
         argumentCount = argumentCount + 2;
         break;
       }
@@ -179,12 +179,12 @@ int main(int argc, char *argv[]){
             if(string(argv[argumentCount+1]) == "time"){
               cout << argv[argumentCount] << " ";
               cout << argv[argumentCount+1] << "\n";
-              cout << "By default, the program will terminate after 100 seconds.\n";
+              cout << "By default, the program will terminate after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               return 0;
             }
             else{
-              cout << "\nThe command you're looking for is '-t time'" << endl;
+              cout << "\nThe command you're looking for is '-t time'\n" << endl;
               argumentCount++;
               return 0;
             }
