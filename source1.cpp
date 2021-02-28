@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
       }
     }
     else{
-      cout << "No more commands were given. Exiting." << endl:
+      cout << "No more commands were given. Exiting." << endl;
     }
   }
 
