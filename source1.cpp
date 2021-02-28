@@ -51,6 +51,10 @@ int main(int argc, char *argv[]){
         return 0;
       }
     }
+    else if(string(argv[i] == NULL)){
+      cout << "FOUND: NULL in the command line. Exiting.\n\n\n"
+      return 0;
+    }
 
   }
 
