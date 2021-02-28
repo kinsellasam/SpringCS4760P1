@@ -130,16 +130,17 @@ int main(int argc, char *argv[]){
 
     case 3:
       if(string(argv[argumentCount]) == "-t"){
-        if(string(argv[argumentCount+1]) == "time"){
+
+        if(argc == 2){
+          cout << "\nThe command you're looking for is '-t time'" << endl;
+          argumentCount++;
+          return 0;
+        }
+        else if(string(argv[argumentCount+1]) == "time"){
           cout << argv[argumentCount] << " ";
           cout << argv[argumentCount+1] << "\n";
           cout << "By default, the program will terminate after 100 seconds.\n";
           argumentCount = argumentCount + 2;
-          return 0;
-        }
-        else if(argc == 2){
-          cout << "\nThe command you're looking for is '-t time'" << endl;
-          argumentCount++;
           return 0;
         }
         else{
