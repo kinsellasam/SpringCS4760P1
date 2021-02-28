@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-  cout << "Hi, just running a quick check.";
+  cout << "Hi, I'm just running a quick check.";
   cout << " You typed in " << argc << " argument(s):\n";
 
   for(int i = 0; i <= argc; i++){    //checking the user input for errors
@@ -17,17 +17,15 @@ int main(int argc, char *argv[]){
       return 0;
     }
 
-    if(string(argv[1]) == "-h"){    //basic help function
+    if(string(argv[i]) == "-h"){    //basic help function
       cout << "\n\nSomeone calling for help?" << endl;
-      cout << "This program is goint to comput the sum of integers using";
-      cout << "a BINARY TREE OF PROCESSES.\n";
+      cout << "This program is goint to compute the sum of integers using";
+      cout << " a BINARY TREE OF PROCESSES.\n";
       cout << "This program will make use of multiple processes using";
-      cout << "shared memory and signals to communicate between processes\n";
+      cout << " shared memory and signals to communicate between processes\n";
       cout << "Exiting...\n\n\n";
       return 0;
     }
-
-
 
   }
 
