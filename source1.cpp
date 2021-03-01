@@ -59,7 +59,7 @@ int main(int argc, char** argv){
 
       case 't':
         if(!isdigit(*optarg) || (t = atoi(optarg)) < 0){
-          error("Invalid amount of children. Max amount is 20.")
+          cout << "Invalid amount of children. Max amount is 20." << endl;
           boolFlag = false;
         }
         break;
