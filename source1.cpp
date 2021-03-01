@@ -59,14 +59,14 @@ int main(int argc, char** argv){
         return 0;
 
       case 's':
-        if(!isnotdigit(*optarg) || (s = atoi(optarg)) < 0){
+        if(!isdigit(*optarg) || (s = atoi(optarg)) < 0){
           error("Invalid amount of children. Max amount is 20.")
           boolFlag = false;
         }
         break;
 
       case 't':
-        if(!isnotdigit(*optarg) || (t = atoi(optarg)) < 0){
+        if(!isdigit(*optarg) || (t = atoi(optarg)) < 0){
           error("Invalid amount of children. Max amount is 20.")
           boolFlag = false;
         }
