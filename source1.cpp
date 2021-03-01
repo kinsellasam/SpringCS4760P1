@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
 		int c = getopt(argc, argv, "t:s:h:");
 
 		if(c == -1){
-      cout << "No arguments passed.\n";
+      cout << "Hi. Try running ./master -h\n";
       break;
     }
 
