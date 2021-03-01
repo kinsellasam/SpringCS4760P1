@@ -137,7 +137,7 @@ int main(int argc, char *argv[]){
           return 0;
         }
       }
-      else if(string(argv[argumentCount]) == "-t"){
+      if(string(argv[argumentCount]) == "-t"){
         if(argc == 2){
           cout << "\nThe command you're looking for is '-t time'" << endl;
           argumentCount++;
