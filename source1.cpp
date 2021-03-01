@@ -123,17 +123,9 @@ int main(int argc, char *argv[]){
         break;
       }
       else{
-        try{
-          int numOfChildren = atoi(argv[argumentCount]);
-          if(numOfChildren <= 20 && numOfChildren > 0){
-            cout << "Forking " << numOfChildren << " children..." << endl;
-            return 0;//for now
-          }
-          else{
-            throw(argv[argumentCount]);
-          }
-        }catch(char myChar){
-          cout << myChar << " is my char\n\n\n";
+        int numOfChildren = atoi(argv[argumentCount]);
+        if(argumentCount > 0 && argumentCount <= DEFAULT_CHILDREN){
+          cout << "Forking this many " << argumentCount << endl;
           return 0;
         }
       }
