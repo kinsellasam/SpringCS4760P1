@@ -71,8 +71,8 @@ int main(int argc, char *argv[]){
   switch(argumentCount){
     case 0:
       if(argc == 1){
-        cout << "Argument: " << argv[argumentCount] << "\n";
-        cout << "I see that you have not put any arguments in..... Exiting.\n\n";
+        cout << "Current Argument: " << argv[argumentCount];
+        cout << "\nI see that you have not put any arguments in..... Exiting.\n\n";
         argumentCount++;
         return 0;
       }
@@ -82,8 +82,8 @@ int main(int argc, char *argv[]){
 
     case 1:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << argv[argumentCount] << "\n";
-        cout << "\n\nSomeone calling for help?" << endl;
+        cout << "Current Argument: " << argv[argumentCount];
+        cout << "\nSomeone calling for help?" << endl;
         cout << "This program is going to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
@@ -138,8 +138,8 @@ int main(int argc, char *argv[]){
 
     case 3:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << "Argument: " << argv[argumentCount];
-        cout << "\n\nSomeone calling for help?" << endl;
+        cout << "Current Argument: " << argv[argumentCount];
+        cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
@@ -192,7 +192,7 @@ int main(int argc, char *argv[]){
 
     case 5:
       if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << "Argument: " << argv[argumentCount];
+        cout << "Current Argument: " << argv[argumentCount];
         cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
@@ -204,8 +204,8 @@ int main(int argc, char *argv[]){
       }
 
     default:
-      cout << "Argument: " << argv[argumentCount];
-      cout << "\nERROR:Comand line: " << argv[argumentCount];
+      cout << "Current Argument: " << argv[argumentCount];
+      cout << "\nERROR: Comand line: " << argv[argumentCount];
       cout << "\nSomething was not correct. Check 'master -h'";
       cout << "\n for the proper syntax. Exiting...\n\n\n";
       return 0;
