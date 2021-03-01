@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
         /* Check if "t" argument is not a digit or less than 0. */
         if(!isdigit(*optarg) || (t = atoi(optarg)) < 0 || (s = atoi(optarg)) > DEFAULT_CHILDREN){
           cout << "ERROR: INVALID INPUT: " << optarg << endl;
-          if(optarg > DEFAULT_CHILDREN){
+          if(s > DEFAULT_CHILDREN){
             cout << "Maximum number of children is 20. Exiting."
           }
           else if(optarg < 0){
