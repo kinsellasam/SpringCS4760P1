@@ -41,11 +41,7 @@ int main(int argc, char *argv[]){
 		switch(c){
 			case 'h':
         cout << "\nSomeone calling for help?" << endl;
-        cout << "This program is goint to compute the sum of integers using";
-        cout << " a BINARY TREE OF PROCESSES.\n";
-        cout << "This program will make use of multiple processes using";
-        cout << " shared memory and signals to communicate between processes\n";
-        cout << "Exiting...\n\n\n";
+        cout << "To run this program: ./master [-s INT] [-t INT] datafile\n";
         return 0;
 
 			case 's':
