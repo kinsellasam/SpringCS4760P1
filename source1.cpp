@@ -130,7 +130,7 @@ int main(int argc, char *argv[]){
             return 0;//for now
           }
           else{
-            throw(numOfChildren);
+            throw(argv[argumentCount]);
           }
         }catch(char myChar){
           cout << myChar << " is my char\n\n\n";
