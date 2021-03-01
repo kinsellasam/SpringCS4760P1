@@ -36,8 +36,6 @@ int main(int argc, char** argv){
   setvbuf(stdout, NULL, _IONBF, 0);
 	setvbuf(stderr, NULL, _IONBF, 0);
 
-  char programName[6] = argv[0];
-
   bool boolFlag = true;
   //get options from the command line arguments
   while(true){
