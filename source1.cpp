@@ -92,10 +92,27 @@ int main(int argc, char *argv[]){
         argumentCount = argumentCount + 1;
         return 0;
       }
-      else if(string(argv[argumentCount]) == "-s" &&
-              stoi(string(argv[argumentCount+1])) == 0){
-                cout << "Argument: " << argv[argumentCount];
-                cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+      else if(string(argv[argumentCount]) == "-s"){
+
+        int numOfChildren = stoi(string(argv[argumentCount+1]));
+        if(numOfChildren > defaultChildren){
+          numOfChildren = defaultChildren;
+          cout << "The number of children you gave was over the maximum.\n";
+          cout << "The maximum number allowed is 20. So let's use that...\n";
+        }
+        else if(numOfChildren < 0){
+          numOfChildren = defaultChildren;
+          cout << "The number of children you gave negative..... Really?\n";
+          cout << "The maximum number allowed is 20. So let's use that...\n";
+        }
+        else{
+          cout << "The number of children is: " << numOfChildren << endl;
+
+          
+        }
+
+        cout << "Argument: " << argv[argumentCount];
+        cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
         cout << "Forking " << argv[argumentCount+1] << " children." << endl;
         argumentCount = argumentCount + 2;
