@@ -127,8 +127,14 @@ int main(int argc, char *argv[]){
           int numOfChildren = atoi(argv[argumentCount]);
           if(numOfChildren <= 20 && numOfChildren > 0){
             cout << "Forking " << numOfChildren << " children..." << endl;
-            return 0;
+            return 0;//for now
           }
+          else{
+            throw(numOfChildren);
+          }
+        }catch(char myChar){
+          cout << myChar << " is my char\n\n\n";
+          return 0;
         }
       }
       else if(string(argv[argumentCount]) == "-t"){
