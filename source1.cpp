@@ -50,7 +50,6 @@ int main(int argc, char *argv[]){
           done = false;
         }
         else{
-          s = optarg;
           cout << s << endl;
         }
         break;
