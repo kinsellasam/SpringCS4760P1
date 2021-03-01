@@ -49,15 +49,12 @@ int main(int argc, char *argv[]){
           cout << "ERROR: INVALID INPUT: " << optarg << endl;
           if(optarg > DEFAULT_CHILDREN){
             cout << "Maximum number of children is 20. Exiting."
-            return 0;
           }
           else if(optarg < 0){
             cout << "Number of children must be positive. Exiting."
-            return 0;
           }
           else{
             cout << "Children must be given as a whole number. Exiting."
-            return 0;
           }
           done = false;
         }
