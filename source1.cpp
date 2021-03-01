@@ -46,7 +46,7 @@ int main(int argc, char *argv[]){
 
 			case 's':
         /* Check if "t" argument is not a digit or less than 0. */
-        if (!isdigit(*optarg) || (t = atoi(optarg)) < 0) {
+        if(!isdigit(*optarg) || (t = atoi(optarg)) < 0){
           cout << "invalid timeout time " << optarg << endl;
           done = false;
         }
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
 
 			case 't':
 				/* Check if "t" argument is not a digit or less than 0. */
-				if (!isdigit(*optarg) || (t = atoi(optarg)) < 0) {
+				if(!isdigit(*optarg) || (t = atoi(optarg)) < 0){
 					cout << "invalid timeout time " << optarg << endl;
 					done = false;
 				}
