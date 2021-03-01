@@ -110,16 +110,16 @@ int main(int argc, char *argv[]){
         }
         else{
           cout << "The number of children is: " << numOfChildren << endl;
-
+          cout << "Argument: " << argv[argumentCount];
+          cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+          cout << "This is where the forking action happens!" << endl;
+          cout << "Forking " << argv[argumentCount+1] << " children." << endl;
+          argumentCount = argumentCount + 2;
+          break;
 
         }
 
-        cout << "Argument: " << argv[argumentCount];
-        cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-        cout << "This is where the forking action happens!" << endl;
-        cout << "Forking " << argv[argumentCount+1] << " children." << endl;
-        argumentCount = argumentCount + 2;
-        break;
+
 
       }
       else if(string(argv[argumentCount]) == "-s" &&
