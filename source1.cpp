@@ -76,6 +76,7 @@ int main(int argc, char *argv[]){
           else{
             cout << "Seconds must be given as a whole number. Exiting.\n\n";
           }
+        }
         else{
           cout << t << endl;
         }
