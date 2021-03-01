@@ -49,19 +49,19 @@ int main(int argc, char *argv[]){
 			case 's':
 				/* Check if "s" argument is not a digit or less than 0. */
 				if (!isdigit(*optarg) || (s = atoi(optarg)) < 0) {
-					error("invalid concurrent processes '%s'", optarg);
-					ok = false;
+          cout << "invalid timeout time " << optarg << endl;
+					done = false;
 				}
 				break;
 			case 't':
 				/* Check if "t" argument is not a digit or less than 0. */
 				if (!isdigit(*optarg) || (t = atoi(optarg)) < 0) {
-					error("invalid timeout time '%s'", optarg);
-					ok = false;
+					cout << "invalid timeout time " << optarg << endl;
+					done = false;
 				}
 				break;
 			default:
-				ok = false;
+				done = false;
 		}
 	}
 
