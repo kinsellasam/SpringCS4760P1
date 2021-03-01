@@ -45,7 +45,7 @@ int main(int argc, char *argv[]){
 
 			case 's':
         /* Check if "t" argument is not a digit or less than 0. */
-        if(!isdigit(*optarg) || (t = atoi(optarg)) < 0){
+        if(!isdigit(*optarg) || (t = atoi(optarg)) < 0 || (t = atoi(optarg)) > DEFAULT_TIME_SEC){
           cout << "invalid timeout time " << optarg << endl;
           done = false;
         }
