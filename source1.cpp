@@ -124,7 +124,7 @@ int main(int argc, char *argv[]){
       }
       else{
         try{
-          int numOfChildren = atoi(string(argv[argumentCount]));
+          int numOfChildren = atoi(argv[argumentCount]);
           if(numOfChildren <= 20 && numOfChildren > 0){
             cout << "Forking " << numOfChildren << " children..." << endl;
             return 0;
