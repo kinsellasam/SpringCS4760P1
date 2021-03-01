@@ -50,7 +50,7 @@ int main(int argc, char** argv){
     switch(myInt){
 
       case 'h':
-        cout << "\nSomeone calling for help?\n";
+        std::cout << "\nSomeone calling for help?\n";
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
