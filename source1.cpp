@@ -6,8 +6,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
+  const int DEFAULT_CHILDREN = 20;
+  const int DEFAULT_TIME_SEC = 100;
 
-  int argumentCount = 0;
+  int argumentCount = 0;d
 
   cout << "Hi, I'm just running a quick check.";
   cout << " You typed in " << argc << " argument(s):\n\n";
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]){
     else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
       //indicate the number of children alowed to exist
       //default: 20
-      const int defaultChildren = 20;
+      const int DEFAULT_CHILDREN = 20;
       cout << argv[i] << " ";
       cout << argv[i+1] << "\n";
       cout << "By default, only 20 children "
@@ -95,20 +97,20 @@ int main(int argc, char *argv[]){
       else if(string(argv[argumentCount]) == "-s"){
 
         int numOfChildren = stoi(string(argv[argumentCount+1]));
-        if(numOfChildren > defaultChildren){
-          numOfChildren = defaultChildren;
+        if(numOfChildren > DEFAULT_CHILDREN){
+          numOfChildren = DEFAULT_CHILDREN;
           cout << "The number of children you gave was over the maximum.\n";
           cout << "The maximum number allowed is 20. So let's use that...\n";
         }
         else if(numOfChildren < 0){
-          numOfChildren = defaultChildren;
+          numOfChildren = DEFAULT_CHILDREN;
           cout << "The number of children you gave negative..... Really?\n";
           cout << "The maximum number allowed is 20. So let's use that...\n";
         }
         else{
           cout << "The number of children is: " << numOfChildren << endl;
 
-          
+
         }
 
         cout << "Argument: " << argv[argumentCount];
@@ -123,7 +125,6 @@ int main(int argc, char *argv[]){
               string(argv[argumentCount+1]) == "x"){
         //indicate the number of children alowed to exist
         //default: 20
-        const int defaultChildren = 20;
         cout << "Argument: " << argv[argumentCount];
         cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
@@ -179,7 +180,7 @@ int main(int argc, char *argv[]){
               string(argv[argumentCount+1]) == "x"){
         //indicate the number of children alowed to exist
         //default: 20
-        const int defaultChildren = 20;
+        const int DEFAULT_CHILDREN = 20;
         cout << "Argument: " << argv[argumentCount];
         cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
