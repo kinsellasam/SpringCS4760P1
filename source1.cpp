@@ -9,21 +9,9 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 */
 
-#include <ctype.h>
-#include <getopt.h>
-#include <signal.h>
-#include <stdarg.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <sys/stat.h>
-#include <sys/time.h>
-#include <sys/wait.h>
-#include <time.h>
-#include <unistd.h>
+#include <cstdlib>
+#include <string>
+#include <iostream>
 
 const int MAX_CHILDREN = 20;
 const in MAX_TIME = 100;
@@ -34,7 +22,7 @@ int main(int argc, char** argv){
   setvbuf(stdout, NULL, _IONBF, 0);
 	setvbuf(stderr, NULL, _IONBF, 0);
 
-  programName = argv[0];
+  char programName = argv[0];
 
   bool boolFlag = true;
   //get options from the command line arguments
