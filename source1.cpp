@@ -30,12 +30,15 @@ int main(int argc, char *argv[]){
   setvbuf(stderr, NULL, _IONBF, 0);
 
   bool done = false;
-  while (true) {
+  while (true){
 		int c = getopt(argc, argv, "t:s:h:");
 
-		if (c == -1) break;
+		if(c == -1){
+      cout << "No arguments passed.\n";
+      break;
+    }
 
-		switch (c) {
+		switch(c){
 			case 'h':
         cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
@@ -52,6 +55,7 @@ int main(int argc, char *argv[]){
 					done = false;
 				}
 				break;
+
 			case 't':
 				/* Check if "t" argument is not a digit or less than 0. */
 				if (!isdigit(*optarg) || (t = atoi(optarg)) < 0) {
@@ -59,6 +63,7 @@ int main(int argc, char *argv[]){
 					done = false;
 				}
 				break;
+
 			default:
 				done = false;
 		}
