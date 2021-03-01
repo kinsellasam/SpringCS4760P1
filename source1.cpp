@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 
   }*/
 
-  switch(argumentCount){
+  switch(argc){
     case 0:
       if(argc == 1){
         cout << "Current Argument: " << argv[argumentCount];
