@@ -75,7 +75,6 @@ int main(int argc, char *argv[]){
       if(argc == 1){
         cout << "Current Argument: " << argv[argumentCount];
         cout << "\nI see that you have not put any arguments in..... Exiting.\n\n";
-        argumentCount++;
         return 0;
       }
       else{
@@ -91,73 +90,24 @@ int main(int argc, char *argv[]){
           cout << "This program will make use of multiple processes using";
           cout << " shared memory and signals to communicate between processes\n";
           cout << "Exiting...\n\n\n";
-          argumentCount = argumentCount + 1;
           return 0;
         }
-        else if(string(argv[argumentCount]) == "-s"){
+        else if(string(argv[argumentCount]) == "-s" || string(argv[argumentCount]) == "-t"){
           if(!argv[argumentCount+1]){
-            cout << "You didn't put an argument for the children. Exiting...\n";
-            return 0;
-          }
-          else if(string(argv[argumentCount+1]) == "x"){
-            cout << "Argument: " << argv[argumentCount];
-            cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-            cout << "By default, only 20 children are allowed to exist at"
-                 << " a time.\n\n" << endl;
+            cout << "You didn't put an argument. Try '-s x' or '-t time'\n";
             cout << "Exiting..." << endl;
             return 0;
           }
           else{
-              int numOfChildren = atoi(argv[argumentCount+1]);
+            argumentCount = argumentCount + 2;
           }
         }
-        /*else if(string(argv[argumentCount]) == "-s" &&
-                string(argv[argumentCount+1]) == "x"){
-                  cout << "Argument: " << argv[argumentCount];
-                  cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-                  cout << "By default, only 20 children "
-               << "are allowed to exist at a time.\n\n" << endl;
-          argumentCount = argumentCount + 2;
-          break;
-        }*/
-        else if(string(argv[argumentCount]) == "-t"){
-          if(argc == 2){
-            cout << "\nThe command you're looking for is '-t time'" << endl;
-            argumentCount++;
-            return 0;
-          }
-          else{
-              if(string(argv[argumentCount+1]) == "time"){
-                cout << "Argument: " << argv[argumentCount];
-                cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-                cout << "By default, the program will terminate after 100 seconds.\n\n";
-                argumentCount = argumentCount + 2;
-                return 0;
-              }
-              else{
-                cout << "\nThe command you're looking for is '-t time'\n" << endl;
-                argumentCount++;
-                return 0;
-              }
-            }
-          }
 
 
     case 3:
-      if(string(argv[argumentCount]) == "-h"){    //basic help function
-        cout << "Current Argument: " << argv[argumentCount];
-        cout << "\nSomeone calling for help?" << endl;
-        cout << "This program is goint to compute the sum of integers using";
-        cout << " a BINARY TREE OF PROCESSES.\n";
-        cout << "This program will make use of multiple processes using";
-        cout << " shared memory and signals to communicate between processes\n";
-        cout << "Exiting...\n\n\n";
-        argumentCount = argumentCount + 1;
-        return 0;
-      }
-      else if(string(argv[argumentCount]) == "-s" &&
+      if(string(argv[argumentCount]) == "-s" &&
               string(argv[argumentCount+1]) == "i"){
-                cout << "Argument: " << argv[argumentCount];
+                cout << "Argument: " << argv[argumentCount]<< "\n";
                 cout << "Argument: " << argv[argumentCount+1] << "\n";
                 cout << "This is where the forking action happens!\n\n" << endl;
                 argumentCount = argumentCount + 2;
@@ -171,6 +121,15 @@ int main(int argc, char *argv[]){
              << "are allowed to exist at a time.\n\n" << endl;
         argumentCount = argumentCount + 2;
         break;
+      }
+      else{
+        try{
+          int numOfChildren = atoi(string(argv[argumentCount]));
+          if(numOfChildren <= 20 && numOfChildren > 0){
+            cout << "Forking " << numOfChildren << " children..." << endl;
+            return 0;
+          }
+        }
       }
       else if(string(argv[argumentCount]) == "-t"){
         if(argc == 2){
