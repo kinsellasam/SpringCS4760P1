@@ -100,7 +100,7 @@ int main(int argc, char *argv[]){
             return 0;
           }
           else{
-            string(argv[argumentCount+1]) == "x"){
+            if(string(argv[argumentCount+1]) == "x"){
               cout << "Argument: " << argv[argumentCount];
               cout << "\nArgument: " << argv[argumentCount+1] << "\n";
               cout << "By default, only 20 children are allowed to exist at"
