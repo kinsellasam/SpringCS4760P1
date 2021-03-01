@@ -48,13 +48,13 @@ int main(int argc, char *argv[]){
         if(!isdigit(*optarg) || (t = atoi(optarg)) < 0 || (s = atoi(optarg)) > DEFAULT_CHILDREN){
           cout << "ERROR: INVALID INPUT: " << optarg << endl;
           if(s > DEFAULT_CHILDREN){
-            cout << "Maximum number of children is 20. Exiting.";
+            cout << "Maximum number of children is 20. Exiting.\n\n";
           }
           else if(optarg < 0){
-            cout << "Number of children must be positive. Exiting.";
+            cout << "Number of children must be positive. Exiting.\n\n";
           }
           else{
-            cout << "Children must be given as a whole number. Exiting.";
+            cout << "Children must be given as a whole number. Exiting.\n\n";
           }
           done = false;
         }
@@ -66,9 +66,16 @@ int main(int argc, char *argv[]){
 			case 't':
 				/* Check if "t" argument is not a digit or less than 0. */
 				if(!isdigit(*optarg) || (t = atoi(optarg)) < 0 || (t = atoi(optarg)) > DEFAULT_TIME_SEC){
-					cout << "invalid timeout time " << optarg << endl;
-					done = false;
-				}
+          cout << "ERROR: INVALID INPUT: " << optarg << endl;
+          if(t > DEFAULT_TIME_SEC){
+            cout << "Maximum amount of time is 100 sec. Exiting.\n\n";
+          }
+          else if(optarg < 0){
+            cout << "Number of seconds must be positive. Exiting.\n\n";
+          }
+          else{
+            cout << "Seconds must be given as a whole number. Exiting.\n\n";
+          }
         else{
           cout << t << endl;
         }
