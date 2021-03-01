@@ -34,7 +34,6 @@ int main(int argc, char *argv[]){
 		int c = getopt(argc, argv, "s:t:h");
 
 		if(c == -1){
-      cout << "Hi. Try running ./master -h\n";
       break;
     }
 
@@ -50,6 +49,9 @@ int main(int argc, char *argv[]){
           cout << "invalid timeout time " << optarg << endl;
           done = false;
         }
+        else{
+          cout << s << endl;
+        }
         break;
 
 			case 't':
@@ -58,6 +60,9 @@ int main(int argc, char *argv[]){
 					cout << "invalid timeout time " << optarg << endl;
 					done = false;
 				}
+        else{
+          cout << t << endl;
+        }
 				break;
 
 			default:
