@@ -108,10 +108,11 @@ int main(int argc, char *argv[]){
               cout << "Exiting..." << endl;
               return 0;
             }
+            else{
+              int numOfChildren = atio(string(argv[argumentCount+1]));
 
-            int numOfChildren = atoi(string(argv[argumentCount+1]));
-            cout << "You said you want " << numOfChildren << " children.\n";
-            
+            }
+
 
           }
         }
