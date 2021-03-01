@@ -48,13 +48,13 @@ int main(int argc, char *argv[]){
         if(!isdigit(*optarg) || (t = atoi(optarg)) < 0 || (s = atoi(optarg)) > DEFAULT_CHILDREN){
           cout << "ERROR: INVALID INPUT: " << optarg << endl;
           if(s > DEFAULT_CHILDREN){
-            cout << "Maximum number of children is 20. Exiting."
+            cout << "Maximum number of children is 20. Exiting.";
           }
           else if(optarg < 0){
-            cout << "Number of children must be positive. Exiting."
+            cout << "Number of children must be positive. Exiting.";
           }
           else{
-            cout << "Children must be given as a whole number. Exiting."
+            cout << "Children must be given as a whole number. Exiting.";
           }
           done = false;
         }
