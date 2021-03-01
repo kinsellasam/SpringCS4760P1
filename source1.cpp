@@ -94,13 +94,18 @@ int main(int argc, char *argv[]){
           argumentCount = argumentCount + 1;
           return 0;
         }
-        else if(string(argv[argumentCount]) == "-s" &&
-                string(argv[argumentCount+1]) == "i"){
-                  cout << "Argument: " << argv[argumentCount];
-                  cout << "Argument: " << argv[argumentCount+1] << "\n";
-                  cout << "This is where the forking action happens!\n\n" << endl;
-                  argumentCount = argumentCount + 2;
-                  break;
+        else if(string(argv[argumentCount]) == "-s"){
+          if(!argv[argumentCount+1]){
+            cout << "You didn't put an argument for the children. Exiting..."
+            return 0;
+          }
+          else{
+            string(argv[argumentCount+1]) == "x"){
+              cout << "Argument: " << argv[argumentCount];
+              cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+              cout << "By default, only 20 children are allowed to exist at"
+                   << " a time.\n\n" << endl;
+          }
         }
         else if(string(argv[argumentCount]) == "-s" &&
                 string(argv[argumentCount+1]) == "x"){
