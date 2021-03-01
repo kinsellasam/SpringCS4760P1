@@ -92,8 +92,8 @@ int main(int argc, char *argv[]){
         argumentCount = argumentCount + 1;
         return 0;
       }
-      else if(string(argv[argumentCount]) == "-s"){
-        if(argv[argumentCount+1] < 0){
+      else if(string(argv[argumentCount]) == "-s" &&
+              stoi(string(argv[argumentCount+1])) == 0){
                 cout << "Argument: " << argv[argumentCount];
                 cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
