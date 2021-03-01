@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 
   bool done = false;
   while (true){
-		int c = getopt(argc, argv, "hs:sx:ti:");
+		int c = getopt(argc, argv, "h:st:");
 
 		if(c == -1){
       cout << "Hi. Try running ./master -h\n";
@@ -45,12 +45,7 @@ int main(int argc, char *argv[]){
         return 0;
 
 			case 's':
-				/* Check if "s" argument is not a digit or less than 0. */
-				if (!isdigit(*optarg) || (s = atoi(optarg)) < 0) {
-          cout << "invalid timeout time " << optarg << endl;
-					done = false;
-				}
-				break;
+        cout <<
 
 			case 't':
 				/* Check if "t" argument is not a digit or less than 0. */
