@@ -104,7 +104,8 @@ int main(int argc, char *argv[]){
               cout << "Argument: " << argv[argumentCount];
               cout << "\nArgument: " << argv[argumentCount+1] << "\n";
               cout << "By default, only 20 children are allowed to exist at"
-            }      << " a time.\n\n" << endl;
+                   << " a time.\n\n" << endl;
+            }
           }
         }
         else if(string(argv[argumentCount]) == "-s" &&
