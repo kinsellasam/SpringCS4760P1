@@ -17,7 +17,7 @@ ________________________________________________________________________________
 #include <unistd.h>
 #include <cstdlib>
 #include <string.h>
-#include <iostream.h>
+#include <iostream>
 
 const int MAX_CHILDREN = 20;
 const int MAX_TIME = 100;
