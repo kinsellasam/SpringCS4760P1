@@ -47,7 +47,13 @@ int main(int argc, char** argv){
     switch(myInt){
 
       case 'h':
-        usage(EXIT_SUCCESS);
+        cout << "\nSomeone calling for help?" << endl;
+        cout << "This program is goint to compute the sum of integers using";
+        cout << " a BINARY TREE OF PROCESSES.\n";
+        cout << "This program will make use of multiple processes using";
+        cout << " shared memory and signals to communicate between processes\n";
+        cout << "Exiting...\n\n\n";
+        return 0;
 
       case 's':
         if(!isnotdigit(*optarg) || (s = atoi(optarg)) < 0){
@@ -69,12 +75,11 @@ int main(int argc, char** argv){
   }
 
   //if there is invalid input, print usage
-  if (!boolFlag) usage(EXIT_FAILURE);
+  if (!boolFlag){
+    cout << "\nTry this: ./master -h\n";
+    return 0;
+  }
 
-  /* Check if an input file was supplied. */
-  if (argv[optind] == NULL) {
-    error("missing input file");
-    usage(EXIT_FAILURE);
 }
 
 }
