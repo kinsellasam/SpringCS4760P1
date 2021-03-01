@@ -92,11 +92,12 @@ int main(int argc, char *argv[]){
         argumentCount = argumentCount + 1;
         return 0;
       }
-      else if(string(argv[argumentCount]) == "-s" &&
-              string(argv[argumentCount+1]) == "i"){
+      else if(string(argv[argumentCount]) == "-s"){
+        if(argv[argumentCount+1] < 0){
                 cout << "Argument: " << argv[argumentCount];
                 cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "This is where the forking action happens!" << endl;
+        cout << "Forking " << argv[argumentCount+1] << " children." << endl;
         argumentCount = argumentCount + 2;
         break;
 
@@ -124,7 +125,8 @@ int main(int argc, char *argv[]){
             if(string(argv[argumentCount+1]) == "time"){
               cout << "Argument: " << argv[argumentCount];
               cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-              cout << "By default, the program will terminate after 100 seconds.\n\n";
+              cout << "By default, the program will terminate";
+              cout << " after 100 seconds.\n\n";
               argumentCount = argumentCount + 2;
               break;
             }
