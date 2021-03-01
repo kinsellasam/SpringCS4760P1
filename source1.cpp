@@ -13,19 +13,11 @@ ________________________________________________________________________________
 #include <signal.h>
 #include <stdarg.h>
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <sys/stat.h>
-#include <sys/time.h>
-#include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
-#include <cstdlib>
-#include <string>
-#include <iostream>
+#include <cstdlib.h>
+#include <string.h>
+#include <iostream.h>
 
 const int MAX_CHILDREN = 20;
 const int MAX_TIME = 100;
@@ -60,7 +52,7 @@ int main(int argc, char** argv){
 
       case 's':
         if(!isdigit(*optarg) || (s = atoi(optarg)) < 0){
-          error("Invalid amount of children. Max amount is 20.")
+          cout << "Invalid amount of children. Max amount is 20." << endl;
           boolFlag = false;
         }
         break;
