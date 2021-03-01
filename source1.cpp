@@ -96,7 +96,7 @@ int main(int argc, char *argv[]){
         }
         else if(string(argv[argumentCount]) == "-s"){
           if(!argv[argumentCount+1]){
-            cout << "You didn't put an argument for the children. Exiting..."
+            cout << "You didn't put an argument for the children. Exiting...";
             return 0;
           }
           else{
