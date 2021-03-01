@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 
   }*/
 
-  switch(argc){
+  switch(argumentCount){
     case 0:
       if(argc == 1){
         cout << "Current Argument: " << argv[argumentCount];
@@ -107,7 +107,7 @@ int main(int argc, char *argv[]){
     case 3:
       if(string(argv[argumentCount]) == "-s" &&
               string(argv[argumentCount+1]) == "i"){
-                cout << "Argument: " << argv[argumentCount]<< "\n";
+                cout << "Argument: " << arg v[argumentCount]<< "\n";
                 cout << "Argument: " << argv[argumentCount+1] << "\n";
                 cout << "This is where the forking action happens!\n\n" << endl;
                 argumentCount = argumentCount + 2;
