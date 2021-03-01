@@ -30,6 +30,9 @@ ________________________________________________________________________________
 const int MAX_CHILDREN = 20;
 const int MAX_TIME = 100;
 
+int s = MAX_CHILDREN;
+int t = MAX_TIME;
+
 int main(int argc, char** argv){
 
   //clean up printing for easy view
@@ -47,7 +50,7 @@ int main(int argc, char** argv){
     switch(myInt){
 
       case 'h':
-        cout << "\nSomeone calling for help?" << endl;
+        cout << "\nSomeone calling for help?\n";
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
@@ -63,7 +66,7 @@ int main(int argc, char** argv){
         break;
 
       case 't':
-        if(!isnotdigit(*optarg) || (s = atoi(optarg)) < 0){
+        if(!isnotdigit(*optarg) || (t = atoi(optarg)) < 0){
           error("Invalid amount of children. Max amount is 20.")
           boolFlag = false;
         }
