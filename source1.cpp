@@ -105,16 +105,16 @@ int main(int argc, char *argv[]){
 
 
     case 3:
-      if(string(argv[argumentCount]) == "-s" &&
-              string(argv[argumentCount+1]) == "i"){
+      if(string(argv[argumentCount-1]) == "-s" &&
+              string(argv[argumentCount]) == "i"){
                 cout << "Argument: " << argv[argumentCount]<< "\n";
                 cout << "Argument: " << argv[argumentCount+1] << "\n";
                 cout << "This is where the forking action happens!\n\n" << endl;
                 argumentCount = argumentCount + 2;
                 break;
       }
-      else if(string(argv[argumentCount]) == "-s" &&
-              string(argv[argumentCount+1]) == "x"){
+      else if(string(argv[argumentCount-1]) == "-s" &&
+              string(argv[argumentCount]) == "x"){
                 cout << "Argument: " << argv[argumentCount];
                 cout << "\nArgument: " << argv[argumentCount+1] << "\n";
                 cout << "By default, only 20 children "
