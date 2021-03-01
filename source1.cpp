@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 
   bool done = false;
   while (true){
-		int c = getopt(argc, argv, "s:t:h");
+		int c = getopt(argc, argv, ":s:t:h");
 
 		if(c == -1){
       break;
