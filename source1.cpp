@@ -108,9 +108,14 @@ int main(int argc, char *argv[]){
               cout << "Exiting..." << endl;
               return 0;
             }
+
+            int numOfChildren = atoi(string(argv[argumentCount+1]));
+            cout << "You said you want " << numOfChildren << " children.\n";
+            
+
           }
         }
-        else if(string(argv[argumentCount]) == "-s" &&
+        /*else if(string(argv[argumentCount]) == "-s" &&
                 string(argv[argumentCount+1]) == "x"){
                   cout << "Argument: " << argv[argumentCount];
                   cout << "\nArgument: " << argv[argumentCount+1] << "\n";
@@ -118,7 +123,7 @@ int main(int argc, char *argv[]){
                << "are allowed to exist at a time.\n\n" << endl;
           argumentCount = argumentCount + 2;
           break;
-        }
+        }*/
         else if(string(argv[argumentCount]) == "-t"){
           if(argc == 2){
             cout << "\nThe command you're looking for is '-t time'" << endl;
