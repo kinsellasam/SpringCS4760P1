@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 
   bool done = false;
   while (true){
-		int c = getopt(argc, argv, "t:s:h:");
+		int c = getopt(argc, argv, "hs:st:t:");
 
 		if(c == -1){
       cout << "Hi. Try running ./master -h\n";
