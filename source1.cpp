@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
   const int DEFAULT_CHILDREN = 20;
   const int DEFAULT_TIME_SEC = 100;
 
-  int argumentCount = 0;d
+  int argumentCount = 0;
 
   cout << "Hi, I'm just running a quick check.";
   cout << " You typed in " << argc << " argument(s):\n\n";
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]){
       }
       else if(string(argv[argumentCount]) == "-s"){
 
-        int numOfChildren = stoi(string(argv[argumentCount+1]));
+        int numOfChildren = argv[argumentCount+1];
         if(numOfChildren > DEFAULT_CHILDREN){
           cout << "You said you wanted " << numOfChildren << endl;
           cout << "That is over the maximum.\n";
@@ -123,9 +123,9 @@ int main(int argc, char *argv[]){
 
       }
       else if(string(argv[argumentCount]) == "-s" &&
-              string(argv[argumentCount+1]) == "x"){
-        //indicate the number of children alowed to exist
-        //default: 20
+              string(argv[argumentCount+1]) == "x"){ //indicate the number of children alowed to exist default: 20
+
+
         cout << "Argument: " << argv[argumentCount];
         cout << "\nArgument: " << argv[argumentCount+1] << "\n";
         cout << "By default, only 20 children "
