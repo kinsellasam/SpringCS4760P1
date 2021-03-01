@@ -1,5 +1,5 @@
 // source1.cpp
-#include <stdlib.h>
+#include <cstdlib>
 #include <string>
 #include <iostream> // header in standard library
 
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]){
       }
       else if(string(argv[argumentCount]) == "-s"){
 
-        int numOfChildren = argv[argumentCount+1];
+        int numOfChildren = atoi(argv[argumentCount+1]);
         if(numOfChildren > DEFAULT_CHILDREN){
           cout << "You said you wanted " << numOfChildren << endl;
           cout << "That is over the maximum.\n";
