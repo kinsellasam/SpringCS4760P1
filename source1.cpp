@@ -96,24 +96,19 @@ int main(int argc, char *argv[]){
         }
         else if(string(argv[argumentCount]) == "-s"){
           if(!argv[argumentCount+1]){
-            cout << "You didn't put an argument for the children. Exiting...";
+            cout << "You didn't put an argument for the children. Exiting...\n";
+            return 0;
+          }
+          else if(string(argv[argumentCount+1]) == "x"){
+            cout << "Argument: " << argv[argumentCount];
+            cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+            cout << "By default, only 20 children are allowed to exist at"
+                 << " a time.\n\n" << endl;
+            cout << "Exiting..." << endl;
             return 0;
           }
           else{
-            if(string(argv[argumentCount+1]) == "x"){
-              cout << "Argument: " << argv[argumentCount];
-              cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-              cout << "By default, only 20 children are allowed to exist at"
-                   << " a time.\n\n" << endl;
-              cout << "Exiting..." << endl;
-              return 0;
-            }
-            else{
               int numOfChildren = atoi(argv[argumentCount+1]);
-
-            }
-
-
           }
         }
         /*else if(string(argv[argumentCount]) == "-s" &&
