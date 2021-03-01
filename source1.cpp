@@ -105,6 +105,8 @@ int main(int argc, char *argv[]){
               cout << "\nArgument: " << argv[argumentCount+1] << "\n";
               cout << "By default, only 20 children are allowed to exist at"
                    << " a time.\n\n" << endl;
+              cout << "Exiting..." << endl;
+              return 0;
             }
           }
         }
