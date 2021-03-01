@@ -51,11 +51,11 @@ int main(int argc, char** argv){
 
       case 'h':
         std::cout << "\nSomeone calling for help?\n";
-        cout << "This program is goint to compute the sum of integers using";
-        cout << " a BINARY TREE OF PROCESSES.\n";
-        cout << "This program will make use of multiple processes using";
-        cout << " shared memory and signals to communicate between processes\n";
-        cout << "Exiting...\n\n\n";
+        std::cout << "This program is goint to compute the sum of integers using";
+        std::cout << " a BINARY TREE OF PROCESSES.\n";
+        std::cout << "This program will make use of multiple processes using";
+        std::cout << " shared memory and signals to communicate between processes\n";
+        std::cout << "Exiting...\n\n\n";
         return 0;
 
       case 's':
@@ -79,7 +79,7 @@ int main(int argc, char** argv){
 
   //if there is invalid input, print usage
   if (!boolFlag){
-    cout << "\nTry this: ./master -h\n";
+    std::cout << "\nTry this: ./master -h\n";
     return 0;
   }
 
