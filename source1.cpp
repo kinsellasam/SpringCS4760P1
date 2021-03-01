@@ -98,14 +98,15 @@ int main(int argc, char *argv[]){
 
         int numOfChildren = stoi(string(argv[argumentCount+1]));
         if(numOfChildren > DEFAULT_CHILDREN){
-          numOfChildren = DEFAULT_CHILDREN;
-          cout << "The number of children you gave was over the maximum.\n";
+          cout << "You said you wanted " << numOfChildren << endl;
+          cout << "That is over the maximum.\n";
           cout << "The maximum number allowed is 20. So let's use that...\n";
+          numOfChildren = DEFAULT_CHILDREN;
         }
         else if(numOfChildren < 0){
-          numOfChildren = DEFAULT_CHILDREN;
-          cout << "The number of children you gave negative..... Really?\n";
+          cout << numOfChildren << " ..... Really?\n";
           cout << "The maximum number allowed is 20. So let's use that...\n";
+          numOfChildren = DEFAULT_CHILDREN;
         }
         else{
           cout << "The number of children is: " << numOfChildren << endl;
@@ -178,12 +179,9 @@ int main(int argc, char *argv[]){
       }
       else if(string(argv[argumentCount]) == "-s" &&
               string(argv[argumentCount+1]) == "x"){
-        //indicate the number of children alowed to exist
-        //default: 20
-        const int DEFAULT_CHILDREN = 20;
-        cout << "Argument: " << argv[argumentCount];
-        cout << "\nArgument: " << argv[argumentCount+1] << "\n";
-        cout << "By default, only 20 children "
+                cout << "Argument: " << argv[argumentCount];
+                cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+                cout << "By default, only 20 children "
              << "are allowed to exist at a time.\n\n" << endl;
         argumentCount = argumentCount + 2;
         break;
