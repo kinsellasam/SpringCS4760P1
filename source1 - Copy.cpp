@@ -1,0 +1,194 @@
+// source1.cpp
+#include <iostream>
+#include <stdio.h>
+#include <unistd.h>
+#include <getopt.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctime>
+#include <cmath>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <time.h>
+#include <fstream> // header in standard library
+
+using namespace std;
+const int DEFAULT_CHILDREN = 20;
+const int DEFAULT_TIME_SEC = 100;
+
+int c = DEFAULT_CHILDREN;
+int t = DEFAULT_TIME_SEC;
+
+int main(int argc, char *argv[]){
+
+
+  int argumentCount = 0;
+
+  cout << "Hi, I'm just running a quick check.";
+  cout << " You typed in " << argc << " argument(s):\n\n";
+
+  do{
+  /*for(int i = 0; i <= argc; i++){    //checking the user input for errors
+
+    if(argc == 1){
+      cout << argv[i] << "\n";
+      cout << "I see that you have not put any input in..... Exiting.\n\n";
+      argumentCount++;
+      return 0;
+    }
+    else{
+      argumentCount++;
+    }
+    if(string(argv[i]) == "-h"){    //basic help function
+      cout << argv[i] << "\n";
+      cout << "\n\nSomeone calling for help?" << endl;
+      cout << "This program is goint to compute the sum of integers using";
+      cout << " a BINARY TREE OF PROCESSES.\n";
+      cout << "This program will make use of multiple processes using";
+      cout << " shared memory and signals to communicate between processes\n";
+      cout << "Exiting...\n\n\n";
+      argumentCount = argumentCount + 1;
+      return 0;
+    }
+    else if(string(argv[i]) == "-s" && string(argv[i+1]) == "i"){
+      cout << argv[i] << " ";
+      cout << argv[i+1] << "\n";
+      cout << "This is where the forking action happens!" << endl;
+      argumentCount = argumentCount + 2;
+
+    }
+    else if(string(argv[i]) == "-s" && string(argv[i+1]) == "x"){
+      //indicate the number of children alowed to exist
+      //default: 20
+      const int DEFAULT_CHILDREN = 20;
+      cout << argv[i] << " ";
+      cout << argv[i+1] << "\n";
+      cout << "By default, only 20 children "
+           << "are allowed to exist at a time.\n" << endl;
+      argumentCount = argumentCount + 2;
+    }
+    else if(string(argv[i]) == "-t"){
+      if(string(argv[i+1]) == "time"){
+        cout << argv[i] << " ";
+        cout << argv[i+1] << "\n";
+        cout << "By default, the program will terminate after 100 seconds.\n";
+        argumentCount = argumentCount + 2;
+      }
+      else{
+        cout << "\nThe command you're looking for is '-t time'" << endl;
+        argumentCount++;
+        return 0;
+      }
+    }
+
+  }*/
+
+  switch(argumentCount){
+    case 0:
+      if(argc == 1){
+        cout << "Current Argument: " << argv[argumentCount];
+        cout << "\nI see that you have not put any arguments in..... Exiting.\n\n";
+        return 0;
+      }
+      else{
+        argumentCount++;
+      }
+
+      case 1:
+        if(string(argv[argumentCount]) == "-h"){    //basic help function
+          cout << "Current Argument: " << argv[argumentCount];
+          cout << "\nSomeone calling for help?" << endl;
+          cout << "This program is goint to compute the sum of integers using";
+          cout << " a BINARY TREE OF PROCESSES.\n";
+          cout << "This program will make use of multiple processes using";
+          cout << " shared memory and signals to communicate between processes\n";
+          cout << "Exiting...\n\n\n";
+          return 0;
+        }
+        else if(string(argv[argumentCount]) == "-s" || string(argv[argumentCount]) == "-t"){
+          if(!argv[argumentCount+1]){
+            cout << "You didn't put an argument. Try '-s x' or '-t time'\n";
+            cout << "Exiting..." << endl;
+            return 0;
+          }
+          else{
+            argumentCount = argumentCount + 2;
+            break;
+          }
+        }
+
+
+    case 3:
+      if(string(argv[argumentCount-1]) == "-s" &&
+              string(argv[argumentCount]) == "i"){
+                cout << "Argument: " << argv[argumentCount]<< "\n";
+                cout << "Argument: " << argv[argumentCount+1] << "\n";
+                cout << "This is where the forking action happens!\n\n" << endl;
+                argumentCount = argumentCount + 2;
+                break;
+      }
+      else if(string(argv[argumentCount-1]) == "-s" &&
+              string(argv[argumentCount]) == "x"){
+                cout << "Argument: " << argv[argumentCount];
+                cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+                cout << "By default, only 20 children "
+             << "are allowed to exist at a time.\n\n" << endl;
+        argumentCount = argumentCount + 2;
+        break;
+      }
+      else{
+        int numOfChildren = atoi(argv[argumentCount]);
+        if(argumentCount > 0 && argumentCount <= DEFAULT_CHILDREN){
+          cout << "Forking this many " << argumentCount << endl;
+          return 0;
+        }
+      }
+      if(string(argv[argumentCount]) == "-t"){
+        if(argc == 2){
+          cout << "\nThe command you're looking for is '-t time'" << endl;
+          argumentCount++;
+          return 0;
+        }
+        else{
+            if(string(argv[argumentCount+1]) == "time"){
+              cout << "Argument: " << argv[argumentCount];
+              cout << "\nArgument: " << argv[argumentCount+1] << "\n";
+              cout << "By default, the program will terminate after 100 seconds.\n\n";
+              argumentCount = argumentCount + 2;
+              return 0;
+            }
+            else{
+              cout << "\nThe command you're looking for is '-t time'\n" << endl;
+              argumentCount++;
+              return 0;
+            }
+          }
+        }
+
+    case 5:
+      if(string(argv[argumentCount]) == "-h"){    //basic help function
+        cout << "Current Argument: " << argv[argumentCount];
+        cout << "\nSomeone calling for help?" << endl;
+        cout << "This program is goint to compute the sum of integers using";
+        cout << " a BINARY TREE OF PROCESSES.\n";
+        cout << "This program will make use of multiple processes using";
+        cout << " shared memory and signals to communicate between processes\n";
+        cout << "Exiting...\n\n\n";
+        argumentCount = argumentCount + 1;
+        return 0;
+      }
+
+    default:
+      cout << "Current Argument: " << argv[argumentCount];
+      cout << "\nERROR: Comand line: " << argv[argumentCount];
+      cout << "\nSomething was not correct. Check 'master -h'";
+      cout << "\n for the proper syntax. Exiting...\n\n\n";
+      return 0;
+  }
+}while(argumentCount != argc);
+
+
+
+  return 0;
+}
