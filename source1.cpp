@@ -19,7 +19,7 @@ using namespace std;
 const int DEFAULT_CHILDREN = 20;
 const int DEFAULT_TIME_SEC = 100;
 
-int c = DEFAULT_CHILDREN;
+int s = DEFAULT_CHILDREN;
 int t = DEFAULT_TIME_SEC;
 bool flag = false;
 
@@ -37,7 +37,6 @@ int main(int argc, char *argv[]){
 
 		switch (c) {
 			case 'h':
-        cout << "Current Argument: " << argv[argumentCount];
         cout << "\nSomeone calling for help?" << endl;
         cout << "This program is goint to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
