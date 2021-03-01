@@ -102,6 +102,7 @@ int main(int argc, char *argv[]){
             argumentCount = argumentCount + 2;
           }
         }
+        break;
 
 
     case 3:
