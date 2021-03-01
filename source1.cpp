@@ -68,7 +68,6 @@ int main(int argc, char *argv[]){
 
   }*/
 
-
   switch(argumentCount){
     case 0:
       if(argc == 1){
@@ -85,7 +84,7 @@ int main(int argc, char *argv[]){
       if(string(argv[argumentCount]) == "-h"){    //basic help function
         cout << argv[argumentCount] << "\n";
         cout << "\n\nSomeone calling for help?" << endl;
-        cout << "This program is goint to compute the sum of integers using";
+        cout << "This program is going to compute the sum of integers using";
         cout << " a BINARY TREE OF PROCESSES.\n";
         cout << "This program will make use of multiple processes using";
         cout << " shared memory and signals to communicate between processes\n";
@@ -208,7 +207,7 @@ int main(int argc, char *argv[]){
       cout << "Argument: " << argv[argumentCount];
       cout << "\nERROR:Comand line: " << argv[argumentCount];
       cout << "\nSomething was not correct. Check 'master -h'";
-      cout << "\n\t for the proper syntax. Exiting...\n\n\n";
+      cout << "\n for the proper syntax. Exiting...\n\n\n";
       return 0;
   }
 }while(argumentCount != argc);
